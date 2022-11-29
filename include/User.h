@@ -12,11 +12,12 @@
 #include <vector>
 #include <chrono>
 #include <ctime>
-
+#include <ostream>
 #ifndef USER_H
 #define	USER_H
 
 class User{
+friend std::ostream &operator<< (std::ostream &, const User &);
 public:
   User(std::string number = "00000",std::string nif = "00000000",std::string name = "default");
   ~User();
@@ -26,6 +27,7 @@ public:
   void addTimestamp();
   std::string getTimestamp();
   bool hasAdminPermission();
+  bool operator<(const User &) const;
 
 protected:
   std::string name;

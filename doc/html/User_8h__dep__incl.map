@@ -1,6 +1,7 @@
 <map id="include/User.h" name="include/User.h">
-<area shape="rect" id="node1" title="Header file of User.cpp." alt="" coords="69,5,183,32"/>
-<area shape="rect" id="node2" href="$User_8cpp.html" title=" " alt="" coords="5,80,108,107"/>
-<area shape="rect" id="node3" href="$Admin_8h.html" title="Header file of Admin.cpp." alt="" coords="132,80,259,107"/>
-<area shape="rect" id="node4" href="$Admin_8cpp.html" title=" " alt="" coords="138,155,253,181"/>
+<area shape="rect" id="node1" title="Header file of User.cpp." alt="" coords="43,5,158,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title=" " alt="" coords="5,155,111,181"/>
+<area shape="rect" id="node3" href="$User_8cpp.html" title=" " alt="" coords="49,80,152,107"/>
+<area shape="rect" id="node4" href="$Admin_8h.html" title="Header file of Admin.cpp." alt="" coords="176,80,303,107"/>
+<area shape="rect" id="node5" href="$Admin_8cpp.html" title=" " alt="" coords="182,155,297,181"/>
 </map>
