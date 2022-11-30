@@ -10,8 +10,8 @@
 
 The code can be compiled with the provided commands.
 ```bash
-git clone https://github.com/clases-julio/p4-implclases-JavierIzqUni.git
-cd p4-implclases-JavierIzqUni
+git clone https://github.com/clases-julio/p6-setstl-usuarios-JavierIzqUni.git
+cd p6-setstl-usuarios-JavierIzqUni
 ./install
 ```
 

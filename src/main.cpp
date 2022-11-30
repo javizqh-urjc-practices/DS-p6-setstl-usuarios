@@ -9,20 +9,57 @@
  * 
  */
 #include "main.h"
-#include "User.h"
 #include "Admin.h"
-#include <set>
-#include <iostream>
 
-int main(int argc, char **argv) { 
-  std::set<User> database;
+int main() { 
+  // Initializing variables
   User *user1 = new User("10000","1234567A","paco");
   User *user2 = new User("20000","1234527J", "juan");
-  Admin *admin1 = new Admin("30000","1234567C", "ELBOSS");
-  database.insert(*user1);
-  database.insert(*user2);
-  //database.insert(*admin1);
+  User *user3 = new User("23412","1234547A","maria");
 
-  for (auto it = database.begin(); it != database.end(); it++)
-    std::cout << *it ;
+  Admin *admin1 = new Admin("30000","1234567C", "ELBOSS");
+  Admin *admin2 = new Admin("72389","1267265A", "Administrator");
+  Admin *admin3 = new Admin("12y33","8763246I", "Jefe");
+
+  std::cout << "----------------------------------------------------------------\n";
+
+  std::set<User> empty;
+  std::cout << "Trying to iterate through an empty set: ";
+  printSet(empty);
+  std::cout << "\n";
+
+  std::set<User> databaseUser;
+  databaseUser.insert(*user1);
+  databaseUser.insert(*user2);
+  databaseUser.insert(*user3);
+  // El set ordena por orden alfabético automaticamente
+  std::cout << "Trying to iterate through an set of only users: ";
+  printSet(databaseUser);
+  std::cout << "\n";
+
+  std::set<User> databaseAdmin;
+  databaseAdmin.insert(*admin1);
+  databaseAdmin.insert(*admin2);
+  databaseAdmin.insert(*admin3);
+  std::cout << "Trying to iterate through an set of only admins: ";
+  printSet(databaseAdmin);
+  std::cout << "\n";
+
+  std::set<User> databaseBoth;
+  databaseBoth.insert(*user1);
+  databaseBoth.insert(*user2);
+  databaseBoth.insert(*user3);
+  databaseBoth.insert(*admin1);
+  databaseBoth.insert(*admin2);
+  databaseBoth.insert(*admin3);
+  std::cout << "Trying to iterate through an set of users and admins: ";
+  printSet(databaseBoth);
+  std::cout << "\n";
+
+  std::cout << "----------------------------------------------------------------\n";
+  databaseUser.insert(*user1);
+  std::cout << "Trying to add user 1 again to only user set: ";
+  printSet(databaseUser);
+  std::cout << "\n";
+
 }
