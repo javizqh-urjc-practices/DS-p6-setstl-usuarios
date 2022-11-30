@@ -17,14 +17,14 @@ int main() {
   User *user2 = new User("20000","1234527J", "juan");
   User *user3 = new User("23412","1234547A","maria");
 
-  Admin *admin1 = new Admin("30000","1234567C", "ELBOSS");
+  Admin *admin1 = new Admin("30000","1234567A", "ELBOSS");
   Admin *admin2 = new Admin("72389","1267265A", "Administrator");
   Admin *admin3 = new Admin("12y33","8763246I", "Jefe");
 
   std::cout << "----------------------------------------------------------------\n";
 
   std::set<User> empty;
-  std::cout << "Trying to iterate through an empty set: ";
+  std::cout << "Trying to iterate through an empty set:\n";
   printSet(empty);
   std::cout << "\n";
 
@@ -33,7 +33,7 @@ int main() {
   databaseUser.insert(*user2);
   databaseUser.insert(*user3);
   // El set ordena por orden alfabético automaticamente
-  std::cout << "Trying to iterate through an set of only users: ";
+  std::cout << "Trying to iterate through an set of only users:\n";
   printSet(databaseUser);
   std::cout << "\n";
 
@@ -41,7 +41,7 @@ int main() {
   databaseAdmin.insert(*admin1);
   databaseAdmin.insert(*admin2);
   databaseAdmin.insert(*admin3);
-  std::cout << "Trying to iterate through an set of only admins: ";
+  std::cout << "Trying to iterate through an set of only admins:\n";
   printSet(databaseAdmin);
   std::cout << "\n";
 
@@ -52,13 +52,19 @@ int main() {
   databaseBoth.insert(*admin1);
   databaseBoth.insert(*admin2);
   databaseBoth.insert(*admin3);
-  std::cout << "Trying to iterate through an set of users and admins: ";
+  std::cout << "Trying to iterate through an set of users and admins:\n";
   printSet(databaseBoth);
   std::cout << "\n";
 
   std::cout << "----------------------------------------------------------------\n";
   databaseUser.insert(*user1);
-  std::cout << "Trying to add user 1 again to only user set: ";
+  std::cout << "Trying to add "<< *user1 <<"again to only user set:\n";
+  printSet(databaseUser);
+  std::cout << "\n";
+
+  std::cout << "----------------------------------------------------------------\n";
+  databaseUser.erase(*user1);
+  std::cout << "Trying to erase "<< *user1 <<"in the only user set:\n";
   printSet(databaseUser);
   std::cout << "\n";
 

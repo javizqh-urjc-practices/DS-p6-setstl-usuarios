@@ -13,7 +13,7 @@
 #include <iomanip> // I/O manipulation library
 
 std::ostream &operator<< (std::ostream &output, const User &user){
-  output << user.name << " ";
+  output << "( " << user.name << ", " << user.employeeNumber << ", " << user.NIF << " ) ";
   return output;
 }
 /**
@@ -33,7 +33,7 @@ User::User(std::string employeeNumber, std::string NIF, std::string name){
 }
 
 bool User::operator<(const User& user) const {
-   return name.compare(user.name) && NIF < user.NIF || employeeNumber < user.employeeNumber;  //assume that you compare the record based on a
+   return NIF > user.NIF || employeeNumber < user.employeeNumber;  //assume that you compare the record based on a
 }
 
 /**
