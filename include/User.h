@@ -28,6 +28,7 @@ public:
   std::string getTimestamp();
   bool hasAdminPermission();
   bool operator<(const User &) const;
+  bool operator==(const User &) const;
 
 protected:
   std::string name;

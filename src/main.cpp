@@ -68,4 +68,9 @@ int main() {
   printSet(databaseUser);
   std::cout << "\n";
 
+  std::cout << "----------------------------------------------------------------\n";
+  databaseUser.erase(*user1);
+  std::cout << "Trying to find "<< *user1 <<"in the only user set:\n";
+  if (*databaseBoth.find(*user1) == *user1) std::cout << "True\n";
+  else std::cout << "False\n";
 }

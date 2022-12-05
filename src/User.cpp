@@ -36,6 +36,10 @@ bool User::operator<(const User& user) const {
    return NIF > user.NIF || employeeNumber < user.employeeNumber;  //assume that you compare the record based on a
 }
 
+bool User::operator==(const User& user) const {
+   return NIF.compare(user.NIF) == 0 && employeeNumber.compare(user.employeeNumber) == 0 && name.compare(user.name) == 0;  //assume that you compare the record based on a
+}
+
 /**
  * @brief Check if the user has the input NIF
  * 
