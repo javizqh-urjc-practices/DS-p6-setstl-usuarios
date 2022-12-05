@@ -73,4 +73,5 @@ int main() {
   std::cout << "Trying to find "<< *user1 <<"in the only user set:\n";
   if (*databaseBoth.find(*user1) == *user1) std::cout << "True\n";
   else std::cout << "False\n";
+  // If not found seg fault
 }
