@@ -28,14 +28,7 @@ build/main
 
 the program will start using the default configuration, using the command line interface.
 
+## Observations
+Sometimes, don't know why, it has failed in the find section twice while testing, giving a seg fault.
 
-If run using 
-
-```
-build/main <employee Number> <employee NIF>
-```
-
-the program will try to log in with the passed arguments using the command line interface, if it fails the program will exit with an error
-
-## Recomendations
-* Use the text mode in order to see with more resolution. Usually press: `Super + F2/F3/F4`
+Also, instead of implementing it directly in the p4 project, I preferred to test it apart.
